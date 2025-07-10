@@ -16,11 +16,11 @@ public class Binarysearchtree
 		}
 		if(value<node.data)
 		{
-			node.left=insertNode(node,value);
+			node.left=insertNode(node.left,value);
 		}
 		else if(value>node.data)
 		{
-			node.right=insertNode(node,value);
+			node.right=insertNode(node.right,value);
 		}
 		return node;
 	}
@@ -33,12 +33,17 @@ public class Binarysearchtree
 		if(node!=null)
 		{
 			inorderNode(node.left);
+			System.out.println(node.data);
+			inorderNode(node.right);
 		}
 	}
 	public static void main(String[] args)
 	{
-		
-
+		Binarysearchtree bst=new Binarysearchtree();
+		bst.insert(10);
+		bst.insert(45);
+		bst.insert(5);
+		bst.inorder();
 	}
 
 }
