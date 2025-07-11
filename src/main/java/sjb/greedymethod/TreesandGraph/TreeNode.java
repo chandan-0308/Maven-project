@@ -1,4 +1,4 @@
-package sjb.Timecomplexity;
+package sjb.greedymethod.TreesandGraph;
 
 public class TreeNode 
 {
